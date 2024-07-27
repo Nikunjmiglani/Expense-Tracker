@@ -3,60 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Expense - Tracker</title>
     <link rel="stylesheet" href="expensetracker.css">
-    <meta name="description" content="A simple expense tracker application to manage your expenses.">
-    <meta name="keywords" content="expense tracker, budget, finance, manage expenses">
-    <meta name="author" content="Your Name">
 </head>
 <body>
     <div class="container">
         <h1>Expense Tracker</h1>
         
         <form id="expense-form">
-            <label for="expense-name">Expense Name:</label>
-            <input type="text" name="expense-name" id="expense-name" required placeholder="Enter Expense Name">
-
-            <label for="expense-amount">Expense Amount:</label>
-            <input type="number" name="expense-amount" id="expense-amount" required placeholder="Enter Expense Amount" min="0" step="0.01">
-
-            <label for="expense-category">Expense Category:</label>
+        
+            <input type="text" name="expense-eame" id="expense-name" required placeholder="Enter Expense Name">
+            <input type="number" name="expense-amount" id="expense-amount" required placeholder="Enter Expense Amount">
             <select required id="expense-category">
-                <option value="" selected disabled>Expense Category</option>
-                <option value="Food">Food</option>
-                <option value="Transport">Transport</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Other">Other</option>
+                <option value="" selected disabled>Expense category</option>
+              <option value="Food">Food</option>
+              <option value="transport">transoprt</option>
+              <option value="entertainment">entertainment</option>
+              <option value="other">other</option>
+
             </select>
-
-            <label for="expense-date">Expense Date:</label>
             <input type="date" id="expense-date" required>
-
-            <label for="new-category">New Category:</label>
-            <input type="text" id="new-category" placeholder="Enter New Category">
-            <button type="button" id="add-category-btn">Add Category</button>
-
             <button class="btnsubmit" type="submit">Add Expense</button>
+            
         </form>
-
         <br>
-
         <div class="expense-table">
             <table>
                 <thead>
-                    <tr>
-                        <th>Expense Name</th>
-                        <th>Expense Amount</th>
-                        <th>Expense Category</th>
-                        <th>Expense Date</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+                <tr>
+                    <th>expense name</th>
+                    <th>expense amount</th>
+                    <th>expense category</th>
+                    <th>expense date</th>
+                    <th>action</th>
+                </tr>
+            </thead>
                 <tbody id="expense-list"></tbody>
             </table>
             <br>
             <div class="total-amount">
-                <strong>Total: </strong>
+                <strong>Total :</strong>
                 <span id="total-amount">0</span>
             </div>
         </div>
